@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1056364233552",
+    "project_id": "schedular-e650f",
+    "storage_bucket": "schedular-e650f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1056364233552:android:8a403597e668027859e255",
+        "android_client_info": {
+          "package_name": "com.example.schedular"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1056364233552-udmui5m09que0dnttm6kgf20908h9brv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzzUVsEPyOgSmyI1ghyavxs0TNiXAjyv4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1056364233552-udmui5m09que0dnttm6kgf20908h9brv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
