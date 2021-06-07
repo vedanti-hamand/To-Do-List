@@ -103,4 +103,6 @@ public class Registration extends AppCompatActivity {
 
     private void setSupportActionBar(Toolbar toolbar) {
     }
+
+
 }

@@ -1,8 +1,5 @@
 package com.example.schedular;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,6 +11,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.Toolbar;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -28,17 +28,25 @@ public class LoginActivity extends AppCompatActivity {
     private ProgressDialog loader;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_login);
+
+
         
         toolbar=findViewById(R.id.loginToolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Login");
         mAuth = FirebaseAuth.getInstance();
         loader = new ProgressDialog(this);
+
+        if (mAuth!=null){
+            Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+            startActivity(intent);
+        }
 
 
 
@@ -59,7 +67,7 @@ public class LoginActivity extends AppCompatActivity {
         loginbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String email = loginEmail.getText().toString().trim();
+                final String email = loginEmail.getText().toString().trim();
                 String Password = loginPassword.getText().toString().trim();
 
                 if(TextUtils.isEmpty(email)) {
@@ -98,4 +106,6 @@ public class LoginActivity extends AppCompatActivity {
 
     private void setSupportActionBar(Toolbar toolbar) {
     }
+
+
 }
